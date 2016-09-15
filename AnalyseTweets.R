@@ -55,7 +55,7 @@ library(tm)
 tweets_corpus <- Corpus(VectorSource(tweets_text))
 
 tweets_corpus <- tm_map(tweets_corpus, removePunctuation) # ici cela va supprimer automatiquement tous les caractères de ponctuation
-tweets_corpus <- tm_map(tweets_corpus, removeWords, stopwords("fr")) # ici cela va supprimer automatiquement une bonne partie des mots français "basiques", tels que "le", "la", etc. mais il manque ! Il manque par exemple "les"...
+tweets_corpus <- tm_map(tweets_corpus, removeWords, stopwords("fr")) # ici cela va supprimer automatiquement une bonne partie des mots français "basiques", tels que "le", "la", etc. mais il en manque ! Il manque par exemple "les"...
 tweets_corpus <- tm_map(tweets_corpus, stripWhitespace) # ici cela va supprimer automatiquement tous les espaces vides
 
 
